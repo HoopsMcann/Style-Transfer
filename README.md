@@ -20,7 +20,7 @@ Others have done similar projects but one of the best implementations, is given 
 ## Screenshots
 Here are some results of our implementation 
 
-![alt text](NST_Vangoh_SFU_1000itr.jpg)
+![](images/NST_Vangoh_SFU_1000itr.jpg)
 
 ## Technologies
 * Tech 1 - version 1.0
