@@ -1,7 +1,5 @@
 # A Matlab Implementation of Neural Style Transfer
-> Neural Style Transfer (NST) is an algorithm that creates an image by combining the stylistic features of a piece of artwork with the content features of a photograph. The defining characteristic of NST which sets it apart from other image stylization techniques is the use of Deep Neural Networks trained for image recognition. first derived in 2016 by Leon Gatys and Matthias Bethge, the algorthm uses a single neural network to extract and recombine the content of one image and the style of another.
-
-In this repository
+> Neural Style Transfer (NST) is an algorithm that creates an image by combining the stylistic features of a piece of artwork with the content features of a photograph. The defining characteristic of NST which sets it apart from other image stylization techniques is the use of Deep Neural Networks trained for image recognition. First derived in 2016 by Leon Gatys and Matthias Bethge, the algorthm uses a single neural network to extract and recombine the content of one image and the style of another. The original papers that describe the algorithm can be found [here](https://ui.adsabs.harvard.edu/abs/2015arXiv150806576G) and [here]
 
 ## Table of contents
 * [General info](#general-info)
@@ -12,8 +10,13 @@ In this repository
 * [Inspiration](#inspiration)
 * [Contact](#contact)
 
-## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+## General Info
+The goal of this project was to gain a solid understanding of the NST model. To this end, we implement Gatys' algorithm from his paper "A Neural Algorithm of Artistic Style" and show that the results obtained are equally as interesting as those produced by the original paper. 
+
+Others have done similar projects but one of the best implementations, is given by https://github.com/jcjohnson/neural-style. Here, Justin Johnson provides a robust and efficient version of the style transfer algorithm and even implements many of the modifications that were added to the original algorithm after its release. 
+
+ Most notably, the toolbox only allows users to access gradients of an objective function that is a scalar function of the networks weights. This is an issue for style transfer applications as the objective we try to optimize is a function of the input of the network and the weights are fixed. Therefore, we must implement our own backpropagation pass outside of the Matlab API (see figure below). Compare this to Tensorflow or Pytorch which can execute forward and backward passes of networks with arbitrary loss functions completely within their computational graphs. 
+
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
