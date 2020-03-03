@@ -9,17 +9,17 @@ close all;
 CNN = 'vgg'; % Network to use for NST
 
 %Image Targets
-style = 'Van_Gogh_Tree_Roots.jpg';
+style = 'polka_dots.jpg';
 a = imread(style); %style source
-a = imresize(a,[456,512]);
+a = imresize(a,[224,224]);
 
 content = 'san-francisco.jpg';
 p = imread(content); %content source
-p = imresize(p,[456,512]);
+p = imresize(p,[224,224]);
 
 %Target Parameters
 content_layers = {'relu4_2'};
-content_weights = 1e-05;
+content_weights = 1e-04;
 texture_layers = {'relu1_1','relu2_1','relu3_1','relu4_1'};
 texture_weights = 1e-06*ones(1,length(texture_layers));
 
@@ -35,7 +35,7 @@ title('Content Source')
 %% Begin Optimization For NST
 
 %Set Style and Content weights
-alpha = 10e+00; %style 
+alpha = 1e+00; %style 
 beta = 40e+00; %content
 
 fun = @(x) NST_objective(x,p,a,alpha,beta,net,texture_layers,content_layers,...
@@ -64,7 +64,7 @@ subplot(2,2,2), imshow(a)
 title('Style Source')
 subplot(2,2,3), imshow(x)
 title('NST output')
-%
+%%
 close all;
 figure(2)
 I = imgaussfilt(x,1);
@@ -73,6 +73,6 @@ I = imgaussfilt(x,1);
 %I = imsharpen(I);
 subplot(1,2,1), imshow(x)
 subplot(1,2,2), imshow(I)
-%
+%%
 filename = strcat('NST_results\',content(1:end-4),'_',style);
 imwrite(x,filename,'jpg');
