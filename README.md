@@ -20,7 +20,7 @@ Others have done similar projects but one of the best implementations, is given 
 ## Screenshots
 Here are some results of our implementation 
 
-![Example screenshot](C:\Users\con_j\NST_Vangoh_SFU_1000itr.jpg "title")
+![Example screenshot](/C:/Users/con_j/NST_Vangoh_SFU_1000itr.jpg "title")
 
 ## Technologies
 * Tech 1 - version 1.0
