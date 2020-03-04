@@ -19,11 +19,23 @@ Others have done similar projects but one of the best implementations, is given 
 
 ## Screenshots
  #### Content Source
+ <p align="center">
+ <img src="images/SFU_concorse.jpg" width=512>
+ </p>
  
  #### Style Sources 
-
+ <p align="center">
+ <img src="images/Starry_Night.jpg" width="200"> <img src="images/Composition7.jpg" width="200"> <img src="images/Pablo.jpg" width="150"> 
+ </p>
+ 
+ <p align="center">
+ <img src="images/Shipwreck.jpg" width="200"> <img src="images/monet2.jpg" width="200"> <img src="images/monet3.jpg" width="200">
+ </p>
+  
  #### Results
+ <p align="center">
 <img src="images/NST_Vangoh_SFU_1000itr.jpg" width="412"> <img src="images/NST_SFU512_1000itr.jpg" width="412"> 
+</p>
 
 ## Technologies
 * Tech 1 - version 1.0
