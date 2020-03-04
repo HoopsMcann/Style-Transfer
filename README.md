@@ -7,8 +7,6 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Status](#status)
-* [Inspiration](#inspiration)
-* [Contact](#contact)
 
 ## General Info
 The goal of this project was to build a working implementation of the NST model that faithfully produced results equivalent to those shown in the original paper by Gatys et al. It was not a priority to create a user-friendly open source app for image stylization as many already exist. If you are looking for such an application, one of the best is given by https://github.com/jcjohnson/neural-style. Here, Justin Johnson provides a robust and efficient version of the style transfer algorithm and even implements many of the modifications that were added to the original algorithm after its release. 
@@ -36,6 +34,7 @@ One of the side-effects of working in Matlab is that we have to implement our ow
 
 ## Technologies
 If you want to try and use this repository on you local machine you will need the following:
+* MatLab
 * Microsoft Visual Studio C++ - For MEX-file compilation
 * Nvidia Cuda - For GPU execution
 * [OPTI Toolbox](https://www.inverseproblem.co.nz/OPTI/index.php/Solvers/L-BFGS-B) - For L-BFGS-B optimization
@@ -43,27 +42,11 @@ If you want to try and use this repository on you local machine you will need th
 
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+Clone the repository to your working directory. Ensure that methods/, images/, MatConvNet and OPTI are on your MatLab path. Make sure MatLab is using the correct compiler and you should be able to run NST_EXPERIMENTS_VGG.m. 
 
 ## Code Examples
 Show examples of usage:
 `put-your-code-here`
 
-## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
-
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
-
 ## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
-
-## Inspiration
-Add here credits. Project inspired by..., based on...
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Project is: Finished
