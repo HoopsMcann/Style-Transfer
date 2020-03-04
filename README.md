@@ -20,7 +20,6 @@ Others have done similar projects but one of the best implementations, is given 
 ## Screenshots
 Here are some results of our implementation 
 
-< img src="images/NST_Vangoh_SFU_1000itr.jpg" width = "256" >
 
 ## Technologies
 * Tech 1 - version 1.0
