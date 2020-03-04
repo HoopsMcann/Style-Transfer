@@ -18,8 +18,11 @@ Others have done similar projects but one of the best implementations, is given 
  We use the VGG19 network for this implementation. If you decide to delve into this repository you will notice that we have implemented our own backpropagation pass. This is a consequnece of using the Matlab environment. The reason being that the deep learning toolbox that comes installed with Matlab  only allows users to access gradients of an objective function that is a scalar function of the networks weights. This is an issue for style transfer applications as the objective we try to optimize is a function of the input of the network and the weights are fixed. Therefore, we must implement our own backpropagation pass outside of the Matlab API (see figure below). Compare this to Tensorflow or Pytorch which can execute forward and backward passes of networks with arbitrary loss functions completely within their computational graphs. 
 
 ## Screenshots
-Here are some results of our implementation 
+ #### Content Source
+ 
+ #### Style Sources 
 
+ #### Results
 <img src="images/NST_Vangoh_SFU_1000itr.jpg" width="412"> <img src="images/NST_SFU512_1000itr.jpg" width="412"> 
 
 ## Technologies
