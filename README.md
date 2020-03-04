@@ -11,32 +11,36 @@
 * [Contact](#contact)
 
 ## General Info
-The goal of this project was to gain a solid understanding of the NST model. To this end, we implement Gatys' algorithm from his paper "A Neural Algorithm of Artistic Style" and show that the results obtained are equally as interesting as those produced by the original paper. 
+The goal of this project was to build a working implementation of the NST model that faithfully produced results equivalent to those shown in the original paper by Gatys et al. It was not a priority to create a user-friendly open source app for image stylization as many already exist. If you are looking for such an application, one of the best is given by https://github.com/jcjohnson/neural-style. Here, Justin Johnson provides a robust and efficient version of the style transfer algorithm and even implements many of the modifications that were added to the original algorithm after its release. 
 
-Others have done similar projects but one of the best implementations, is given by https://github.com/jcjohnson/neural-style. Here, Justin Johnson provides a robust and efficient version of the style transfer algorithm and even implements many of the modifications that were added to the original algorithm after its release. 
+One of the side-effects of working in Matlab is that we have to implement our own backpropagation pass. The reason for this is that the deep learning toolbox that comes installed with Matlab  only allows users to access gradients of an objective function that is a scalar function of the networks weights. This is an issue for style transfer applications as the objective we try to optimize is a function of the input of the network and the weights are fixed. Compare this to Tensorflow or Pytorch which can execute forward and backward passes of networks with arbitrary loss functions completely within their computational graphs. 
 
- We use the VGG19 network for this implementation. If you decide to delve into this repository you will notice that we have implemented our own backpropagation pass. This is a consequnece of using the Matlab environment. The reason being that the deep learning toolbox that comes installed with Matlab  only allows users to access gradients of an objective function that is a scalar function of the networks weights. This is an issue for style transfer applications as the objective we try to optimize is a function of the input of the network and the weights are fixed. Therefore, we must implement our own backpropagation pass outside of the Matlab API (see figure below). Compare this to Tensorflow or Pytorch which can execute forward and backward passes of networks with arbitrary loss functions completely within their computational graphs. 
 
 ## Screenshots
  
   
- #### Results
+ #### Results 
+ Some outputs 
+ 
  <p align="center">
-<img src="images/SFU_concorse.jpg" width="256" height="256"> <img src="images/Starry_Night.jpg" width="256" height="256"> <img src="images/NST_Vangoh_SFU_1000itr.jpg" width="256" height="256"> 
+<img src="images/SFU_concorse.jpg" width="256" height="256" title="Content Source"> <img src="images/Starry_Night.jpg" width="256" height="256" title="Style Source"> <img src="images/NST_Vangoh_SFU_1000itr.jpg" width="256" height="256" title="Output"> 
 </p>
 
 <p align="center">
-<img src="images/SFU_concorse.jpg" width="256" height="256"> <img src="images/Composition7.jpg" width="256" height="256"> <img src="images/NST_SFU512_1000itr.jpg" width="256" height="256"> 
+<img src="images/SFU_concorse.jpg" width="256" height="256" title="Content Source"> <img src="images/Composition7.jpg" width="256" height="256" title="Style Source"> <img src="images/NST_SFU512_1000itr.jpg" width="256" height="256" title="Output"> 
 </p>
 
 <p align="center">
-<img src="images/SFU_concorse.jpg" width="256" height="256"> <img src="images/Pablo.jpg" width="256" height="256"> <img src="images/NST_Pablo_SFU512_1000itr.jpg" width="256" height="256"> 
+<img src="images/SFU_concorse.jpg" width="256" height="256" title="Content Source"> <img src="images/Pablo.jpg" width="256" height="256" title="Style Source "> <img src="images/NST_Pablo_SFU512_1000itr.jpg" width="256" height="256" title="Output"> 
 </p>
 
 ## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+If you want to try and use this repository on you local machine you will need the following:
+* Microsoft Visual Studio C++ - For MEX-file compilation
+* Nvidia Cuda - For GPU execution
+* [OPTI Toolbox](https://www.inverseproblem.co.nz/OPTI/index.php/Solvers/L-BFGS-B) - For L-BFGS-B optimization
+* MatConvNet - Compiled with GPU support
+
 
 ## Setup
 Describe how to install / setup your local environement / add link to demo version.
