@@ -25,6 +25,14 @@ Others have done similar projects but one of the best implementations, is given 
 <img src="images/SFU_concorse.jpg" width="256" height="256"> <img src="images/Starry_Night.jpg" width="256" height="256"> <img src="images/NST_Vangoh_SFU_1000itr.jpg" width="256" height="256"> 
 </p>
 
+<p align="center">
+<img src="images/SFU_concorse.jpg" width="256" height="256"> <img src="images/Composition7.jpg" width="256" height="256"> <img src="images/NST_SFU512_1000itr.jpg" width="256" height="256"> 
+</p>
+
+<p align="center">
+<img src="images/SFU_concorse.jpg" width="256" height="256"> <img src="images/Pablo.jpg" width="256" height="256"> <img src="images/NST_Pablo_SFU512_1000itr.jpg" width="256" height="256"> 
+</p>
+
 ## Technologies
 * Tech 1 - version 1.0
 * Tech 2 - version 2.0
